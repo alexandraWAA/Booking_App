@@ -2,7 +2,9 @@ def filter_by_state(dictionary: list[dict[str]], state="EXECUTED") -> list[dict[
     """Функция формирования нового списка словарей по ключевому слову"""
     new_dictionary = []
     for el in dictionary:
-        if el.get("state") == state:
+        if state is None or state == "" or state == " ":
+            print("Введите корректное state")
+        elif el.get("state") == state:
             new_dictionary.append(el)
 
     return new_dictionary
