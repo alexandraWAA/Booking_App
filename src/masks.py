@@ -23,7 +23,7 @@ def get_mask_card_number(card_number: str) -> str:
 
 def get_mask_account(card_number: str) -> str:
     """Функцию маскировки номера банковского счета"""
-    #new_card_number = ""
+    # new_card_number = ""
     number_part = ""
     if 17 <= len(card_number) <= 25:
         for el in card_number[-4:]:
