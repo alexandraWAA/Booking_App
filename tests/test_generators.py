@@ -1,6 +1,8 @@
-import pytest
-
-from src.generators import get_card_number_generator, get_filter_by_currency, get_transaction_descriptions
+from src.generators import (
+    get_card_number_generator,
+    get_filter_by_currency,
+    get_transaction_descriptions,
+)
 
 transactions = [
     {
@@ -24,12 +26,20 @@ transactions = [
 
 def test_get_filter_by_currency(usd_transactions):
 
-    assert next(get_filter_by_currency(transactions, "USD")) == usd_transactions
+    assert (
+        next(get_filter_by_currency(transactions, "USD")) == usd_transactions
+    )
 
 
 def test_get_transaction_descriptions(first_transaction_descriptions):
-    assert next(get_transaction_descriptions(transactions)) == first_transaction_descriptions
+    assert (
+        next(get_transaction_descriptions(transactions))
+        == first_transaction_descriptions
+    )
 
 
 def test_get_card_number_generator():
-    assert next(get_card_number_generator(111111111, 111111119)) == "0000 0001 1111 1111"
+    assert (
+        next(get_card_number_generator(111111111, 111111119))
+        == "0000 0001 1111 1111"
+    )

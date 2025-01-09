@@ -1,4 +1,6 @@
-def filter_by_state(dictionary: list[dict[str]], state="EXECUTED") -> list[dict[str]]:
+def filter_by_state(
+    dictionary: list[dict[str]], state="EXECUTED"
+) -> list[dict[str]]:
     """Функция формирования нового списка словарей по ключевому слову"""
     new_dictionary = []
     for el in dictionary:
