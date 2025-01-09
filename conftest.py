@@ -92,3 +92,10 @@ def all_transactions():
         }
     ]
 )
+@pytest.fixture
+def usd_transactions():
+    return {'operationAmount': {'currency': {'code': 'USD'}}, 'description': 'Перевод организации a'}
+
+@pytest.fixture
+def first_transaction_descriptions():
+    return 'Перевод организации a'

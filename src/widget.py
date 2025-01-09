@@ -6,7 +6,7 @@ from .masks import get_mask_account, get_mask_card_number
 def mask_account_card(card_number: str) -> str:
     """Функция обработки информации о картах и счетах"""
     numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    #num = ""
+    # num = ""
     num_new = ""
 
     cn = card_number.split(" ")
